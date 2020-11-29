@@ -33,13 +33,9 @@ class LinuxButtonFactory: AbstractFactory {
     override fun createButton() = LinuxButton()
 }
 
-class Main {
-    companion object Run {
-        fun run() {
-            val factory = if (System.currentTimeMillis() % 2L == 0L) LinuxButtonFactory() else WindowsButtonFactory()
-            val button = factory.createButton()
-            println("=========== CREATED BUTTON ===============")
-            println(button.render())
-        }
-    }
+fun runAbstractFactory() {
+    val factory = if (System.currentTimeMillis() % 2L == 0L) LinuxButtonFactory() else WindowsButtonFactory()
+    val button = factory.createButton()
+    println("=========== CREATED BUTTON ===============")
+    println(button.render())
 }

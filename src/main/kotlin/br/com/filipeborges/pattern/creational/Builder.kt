@@ -29,7 +29,7 @@ class Computer private constructor(
 
 }
 
-fun run() {
+fun runBuilder() {
     val computer = Computer.Builder()
         .cpu("AMD FX")
         .motherBoard("ASUS")
